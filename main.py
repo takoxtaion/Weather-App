@@ -80,11 +80,11 @@ weather = {
     "scattered clouds": "☁️",
     "broken clouds": "☁️ ☁️",
     "shower rain": "🌧",
-    "rain": ".",
+    "rain": "🌧️",
     "thunderstorm": "⛈️",
     "snow": "🌨️ ❄️",
     "mist": "🌫️",
-    "light rain": "emoji",
+    "light rain": "🌧️",
 }
 
 
@@ -99,7 +99,7 @@ def main():
 
     print(user_chosen_color + ascii_text)
 
-    print(f"Temperature in {city} is {temp_celsius}°C, weather: {new_description}")
+    print(f"Temperature in {city} is {temp_celsius}°C, weather: {description} {new_description}")
     print(f"Sunrise 🌅 : {sunrise_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Sunset 🌄 : {sunset_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
