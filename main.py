@@ -37,7 +37,8 @@ def make_url(city):
     is_complete = False
     while not is_complete:
         try:
-            url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=dceb1e36e4625956b5aca3c3b255d39a"
+            base = "https://api.openweathermap.org/data/2.5/weather?q="
+            url = f"{base}{city}&appid={api_key}"
             response = requests.get(url)
             response.raise_for_status()
             is_complete = True
