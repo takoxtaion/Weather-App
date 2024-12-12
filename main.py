@@ -13,13 +13,16 @@ with open("my_key.txt", "r") as file:
 
 
 def asking_user_city():
-    return input("City - (ex.Tbilisi): ")
+    print("Please enter the name of the city you want to check the weather for:")
+    return input("City (e.g., Tbilisi): ")
 
 
 def asking_user_color():
     valid_colors = {"red", "green", "yellow", "blue", "magenta", "cyan", "white"}
     while True:
-        color = input(f"Choose any color: {valid_colors}: ").lower()
+        print("Choose a color for your weather info:")
+        print(f"Available colors: {valid_colors}")
+        color = input("Choose a color (e.g., blue): ").lower()
         if color in valid_colors:
             return color
         else:
@@ -99,9 +102,10 @@ def main():
 
     print(user_chosen_color + ascii_text)
 
-    print(f"Temperature in {city} is {temp_celsius}°C, weather: {description} {new_description}")
-    print(f"Sunrise 🌅 : {sunrise_time.strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Sunset 🌄 : {sunset_time.strftime('%Y-%m-%d %H:%M:%S')}")
-
-
+    print(f"🌡️  Current Temperature: {temp_celsius}°C")
+    print(f"🌤️  Weather Description: {description} {new_description}")
+    print(f"🌅 Sunrise : {sunrise_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🌄 Sunset : {sunset_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print("Thank you for using the Weather App! Have a sunny day! 😎🌈")
+    
 main()
