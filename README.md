@@ -117,8 +117,8 @@ __      _____  __ _| |_| |__   ___ _ __  (_)_ __   |_   _| __ )(_) (_)___(_)
   \_/\_/ \___|\__,_|\__|_| |_|\___|_|    |_|_| |_|   |_| |____/|_|_|_|___/_|
                                                                             
 
-🌡️  Current Temperature: 6°C
-🌤️  Weather Description: clear sky ☀️
+🌡️ Current Temperature: 6°C
+🌤️ Weather Description: clear sky ☀️
 🌅 Sunrise : 2024-12-12 08:18:42
 🌄 Sunset : 2024-12-12 17:30:28
 Thank you for using the Weather App! Have a sunny day! 😎🌈
