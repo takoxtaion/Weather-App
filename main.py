@@ -37,8 +37,7 @@ def make_url(city):
     is_complete = False
     while not is_complete:
         try:
-            base = "https://api.openweathermap.org/data/2.5/weather?q="
-            url = f"{base}{city}&appid={api_key}"
+            url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=dceb1e36e4625956b5aca3c3b255d39a"
             response = requests.get(url)
             response.raise_for_status()
             is_complete = True
@@ -108,5 +107,5 @@ def main():
     print(f"🌅 Sunrise : {sunrise_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"🌄 Sunset : {sunset_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print("Thank you for using the Weather App! Have a sunny day! 😎🌈")
-
+    
 main()
