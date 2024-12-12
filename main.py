@@ -4,6 +4,7 @@ import pyfiglet
 
 import colorama
 from colorama import Fore
+
 colorama.init(autoreset=True)
 
 
@@ -13,6 +14,7 @@ with open("my_key.txt", "r") as file:
 
 def asking_user_city():
     return input("City - (ex.Tbilisi): ")
+
 
 def asking_user_color():
     valid_colors = {"red", "green", "yellow", "blue", "magenta", "cyan", "white"}
@@ -25,10 +27,7 @@ def asking_user_color():
 
 
 def color_to_colorama(color):
-    return getattr(Fore, color.upper(), Fore.WHITE) 
-
-
-
+    return getattr(Fore, color.upper(), Fore.WHITE)
 
 
 def make_url(city):
@@ -44,6 +43,7 @@ def make_url(city):
             print("Wrong City! Try Again...")
             city = asking_user_city()
 
+
 def kelvin_to_celsius(kelvin):
     return round(kelvin - 273.15)
 
@@ -55,8 +55,12 @@ def all_about_weather(response):
 
     timezone_offset = response["timezone"]
 
-    sunrise_time = dt.fromtimestamp(response["sys"]["sunrise"] + timezone_offset, tz=timezone.utc)
-    sunset_time = dt.fromtimestamp(response["sys"]["sunset"] + timezone_offset, tz=timezone.utc)
+    sunrise_time = dt.fromtimestamp(
+        response["sys"]["sunrise"] + timezone_offset, tz=timezone.utc
+    )
+    sunset_time = dt.fromtimestamp(
+        response["sys"]["sunset"] + timezone_offset, tz=timezone.utc
+    )
 
     return temp_celsius, description, sunrise_time, sunset_time
 
@@ -67,8 +71,9 @@ def all_about_weather(response):
 #         return default_description
 #     else:
 #         return descrtiption
-    
 
+
+# aq iyo nika
 
 weather = {
     "clear sky": "☀️",
@@ -80,9 +85,9 @@ weather = {
     "thunderstorm": "⛈️",
     "snow": "🌨️ ❄️",
     "mist": "🌫️",
-    "light rain": "emoji"
-
+    "light rain": "emoji",
 }
+
 
 def main():
     firstCity = asking_user_city()
@@ -91,7 +96,7 @@ def main():
     response, city = make_url(firstCity)
     temp_celsius, description, sunrise_time, sunset_time = all_about_weather(response)
     ascii_text = pyfiglet.figlet_format(f"weather in {city}")
-    
+
     print(user_chosen_color + ascii_text)
 
     print(f"Temperature in {city} is {temp_celsius}°C, weather: {description}")
