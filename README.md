@@ -14,17 +14,10 @@ Whether you're new to programming or just need to quickly check the weather, thi
   - **Sunrise** and **Sunset** times 🌅🌄
 - **Command-Line Interface**: A simple interface with ASCII art for a fun touch 🎨
 
-## Before You Start 🚦
+<br>
 
-### 1. **Install Python** 🐍
-This app is written in Python, so you’ll need Python installed on your computer.
-
-- **How to check if you have Python installed**:  
-  Open your terminal or command prompt and type:
-
-  ```bash
-  python --version
 # Weather App Setup and Usage Guide
+<br>
 
 ## 1. Check if Python is Installed 🐍
 
