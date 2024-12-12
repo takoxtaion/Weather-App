@@ -73,7 +73,7 @@ def check_description(descrtiption):
         return weather[descrtiption]
 
 
-# aq iyo nika, da takoc aqaa!
+# aq iyo nika, da takoc aqaa!, HI TAKKKK
 
 weather = {
     "clear sky": "☀️",
