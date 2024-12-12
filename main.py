@@ -65,15 +65,15 @@ def all_about_weather(response):
     return temp_celsius, description, sunrise_time, sunset_time
 
 
-# def check_description(descrtiption):
-#     if descrtiption not in weather.keys():
-#         default_description = "🌫️"
-#         return default_description
-#     else:
-#         return descrtiption
+def check_description(descrtiption):
+    if descrtiption not in weather.keys():
+        default_description = "🌫️"
+        return default_description
+    else:
+        return weather[descrtiption]
 
 
-# aq iyo nika
+# aq iyo nika, da takoc aqaa!
 
 weather = {
     "clear sky": "☀️",
@@ -95,11 +95,12 @@ def main():
     user_chosen_color = color_to_colorama(color)
     response, city = make_url(firstCity)
     temp_celsius, description, sunrise_time, sunset_time = all_about_weather(response)
+    new_description = check_description(description)
     ascii_text = pyfiglet.figlet_format(f"weather in {city}")
 
     print(user_chosen_color + ascii_text)
 
-    print(f"Temperature in {city} is {temp_celsius}°C, weather: {description}")
+    print(f"Temperature in {city} is {temp_celsius}°C, weather: {new_description}")
     print(f"Sunrise 🌅 : {sunrise_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Sunset 🌄 : {sunset_time.strftime('%Y-%m-%d %H:%M:%S')}")
 
